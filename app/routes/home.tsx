@@ -1,13 +1,24 @@
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Test },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "BetterResume.AI" },
+    {
+      name: "description",
+      content:
+        "Real-time AI-powered resume analyzer to help you land your dream job!",
+    },
   ];
 }
 
 export default function Home() {
-  return <Welcome />;
+  return (
+    <main>
+      <section className="main-section">
+        <div className="page-heading">
+          <h1>Track Your Applications & Resume Ratings</h1>
+        </div>
+      </section>
+    </main>
+  );
 }
